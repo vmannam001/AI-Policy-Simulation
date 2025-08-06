@@ -1,5 +1,5 @@
 {
   "resource": "salary_sheet",
   "action": "read",
-  "condition": "time < '18:00'"
+  "condition": "time < '10:00'"
 }

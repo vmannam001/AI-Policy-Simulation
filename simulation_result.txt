@@ -2,7 +2,7 @@
 
 🔄 **Policy Change Impact Summary**
 - Total Logs Evaluated: **4**
-- Access Decisions Changed: **1**
+- Access Decisions Changed: **0**
 
 📝 New Policy Proposed:
 - Resource: `salary_sheet`
