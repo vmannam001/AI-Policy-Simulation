@@ -1,0 +1,16 @@
+🚨 **Predictive Access Simulation Report (Rule-Based)** 🚨
+
+🔄 **Policy Change Impact Summary**
+- Total Logs Evaluated: **4**
+- Access Decisions Changed: **1**
+
+📝 New Policy Proposed:
+- Resource: `salary_sheet`
+- Action: `read`
+- Condition: `time < '18:00'`
+
+📊 Sample Change:
+- Original: outcome = Permit (at 11:00 AM)
+- Under new policy: outcome = Deny (access allowed only before 10:00 AM)
+
+> ⚠️ This change will **deny access** to users who were previously allowed after 10 AM.

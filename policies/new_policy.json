@@ -1,0 +1,5 @@
+{
+  "resource": "salary_sheet",
+  "action": "read",
+  "condition": "time < '18:00'"
+}

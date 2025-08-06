@@ -1,0 +1,5 @@
+user,resource,action,timestamp,outcome
+user1,invoice,read,2025-08-01T10:00:00,Permit
+user2,salary_sheet,write,2025-08-01T12:00:00,Deny
+user3,report,read,2025-08-01T15:00:00,Permit
+user4,salary_sheet,read,2025-08-01T19:00:00,Permit
