@@ -1,0 +1,32 @@
+name: Simulate Policy Change
+
+on:
+  pull_request:
+    paths:
+      - 'policies/**.json'
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Run simulation script
+        run: python simulate_policy.py
+
+      - name: Post comment on PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COMMENT=$(cat simulation_result.txt)
+          gh pr comment ${{ github.event.pull_request.number }} --body "$COMMENT"
